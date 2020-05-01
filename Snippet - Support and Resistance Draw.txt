@@ -1,0 +1,17 @@
+   //Support and resistance
+   if(SREntry>0&&ShutDown==false && AllowTrading == true){
+        //draw support and resistance
+         if(BuyMe){
+             drawResistance(getUpperFractalBar(Period(), BAR_TO_START_SCAN_FROM));
+         }else if(SellMe){
+             drawSupport(getLowerFractalBar(Period(),BAR_TO_START_SCAN_FROM));  
+         }else{
+              //market ranging dont draw trend lines
+         }
+         
+       
+   }
+   else{
+       ObjectDelete("Z_Resistance");
+        ObjectDelete("Z_Support");
+   }
